@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Granted Access Converter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Sysmon Event ID 10 (Process Access): Granted Access Converter</h1>
+
+  <div class="converter-section">
+    <h2>GrantedAccess to Access Rights</h2>
+    <label for="granted-access">GrantedAccess (hex):</label>
+    <input type="text" id="granted-access" placeholder="e.g. 0x0440">
+    <button id="granted-access-btn">Convert</button>
+    <ul id="access-rights-list" class="rights-list"></ul>
+  </div>
+
+  <div class="converter-section">
+    <h2>Access Rights to GrantedAccess</h2>
+    <label for="access-rights-select">Access Rights:</label>
+    <select id="access-rights-select" multiple data-trigger>
+      <option value="PROCESS_TERMINATE">PROCESS_TERMINATE</option>
+      <option value="PROCESS_CREATE_THREAD">PROCESS_CREATE_THREAD</option>
+      <option value="PROCESS_SET_SESSIONID">PROCESS_SET_SESSIONID</option>
+      <option value="PROCESS_VM_OPERATION">PROCESS_VM_OPERATION</option>
+      <option value="PROCESS_VM_READ">PROCESS_VM_READ</option>
+      <option value="PROCESS_VM_WRITE">PROCESS_VM_WRITE</option>
+      <option value="PROCESS_DUP_HANDLE">PROCESS_DUP_HANDLE</option>
+      <option value="PROCESS_CREATE_PROCESS">PROCESS_CREATE_PROCESS</option>
+      <option value="PROCESS_SET_QUOTA">PROCESS_SET_QUOTA</option>
+      <option value="PROCESS_SET_INFORMATION">PROCESS_SET_INFORMATION</option>
+      <option value="PROCESS_QUERY_INFORMATION">PROCESS_QUERY_INFORMATION</option>
+      <option value="PROCESS_SUSPEND_RESUME">PROCESS_SUSPEND_RESUME</option>
+      <option value="PROCESS_QUERY_LIMITED_INFORMATION">PROCESS_QUERY_LIMITED_INFORMATION</option>
+      <option value="PROCESS_SET_LIMITED_INFORMATION">PROCESS_SET_LIMITED_INFORMATION</option>
+      <option value="PROCESS_ALL_ACCESS">PROCESS_ALL_ACCESS</option>
+    </select>
+    <button id="access-rights-btn">Convert</button>
+    <p id="result-granted-access">GrantedAccess: </p>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
