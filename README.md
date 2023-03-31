@@ -7,6 +7,10 @@ events.
 
 ![img info](./Granted-access-converter.png)
 
+## Quick access
+
+To get a quick impression on the output and functionalities of the tool visit https://yukh1402.github.io/granted-access-converter/
+
 ## Features
 
 - Convert `GrantedAccess` values from hexadecimal to a list of access rights
